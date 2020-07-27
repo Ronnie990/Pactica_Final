@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+    <div class="card">
+    <form method="POST" enctype="multipart/form-data" >
+        <div class="card-header bg-primary text-white">
+            <h4>Product Form</h4>
+        </div>
+        <div class="card-body">
+
+                
+                <input type="text" class="form-control" name="id" placeholder = "Id" value={{ product.id}}>
+                <input type="text" class="form-control" name="description" placeholder = "Description" value={{ product.description}}>
+                <input type="number" class="form-control" name="price" placeholder = "Price" value={{ product.price}}>
+                <!--<input type="text" class="form-control" name="imageUrl" placeholder = "Image File"  value={{ product.imageUrl }}>-->
+                <input type="file" id="img" name="imageUrl" accept="image/*"/>
+
+
+
+        </div>
+        <div class="card-footer text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 offset-md-3 ">
+                        <input type="submit" class="btn btn-primary" value="Save"/>
+                    </div>
+                    <div class="col-sm">
+                        <a class="btn btn-danger" href="/"> Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+{% endblock content %}

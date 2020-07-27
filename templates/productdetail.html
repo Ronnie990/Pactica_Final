@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block content %}
+    <div>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>Product detail</h4>
+            </div>
+            <div class="card-body">
+                <p> <strong>Id: </strong>{{ product.id }}</p>
+                <p> <strong>Description:</strong> {{ product.description }}</p>
+                <p> <strong>Price:</strong> {{ product.price }}</p>
+                <img src={{ 'http://127.0.0.1:5000/static/img/'+ product.imageUrl }}>
+            </div>
+            <div class="card-footer">
+                <a href={{ url_for("home")}}> Back to list </a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}  
